@@ -1,24 +1,25 @@
 # 🌾 Rice Plant Disease Detection
 
-A deep learning application for detecting rice plant diseases using CNN with 89.93% accuracy. Upload a rice leaf image to get instant predictions and disease management recommendations.
+A professional Deep Learning application for real-time rice plant disease detection using Convolutional Neural Networks (CNN). This project achieves **89.93% accuracy** across 6 distinct categories, providing instant diagnosis and management recommendations.
 
 ## 🎯 Features
-- **6 Disease Detection**: Bacterial Leaf Blight, Brown Spot, Leaf Blast, Leaf Scald, Sheath Blight, and Healthy Leaf Classification
-- **High Accuracy**: 89.93% validation accuracy
-- **Real-time Predictions**: Instant results with confidence scores
-- **Comprehensive Disease Info**: Detailed cause, symptoms, and management strategies for each disease
-- **User-Friendly Interface**: Modern, responsive Streamlit web application
-- **Fast Processing**: Optimized for quick predictions on standard hardware
+- **6 Disease Detection**: Bacterial Leaf Blight, Brown Spot, Leaf Blast, Leaf Scald, Sheath Blight, and Healthy Leaf Classification.
+- **High Accuracy**: 89.93% validation accuracy using optimized CNN architecture.
+- **Dual Interface**: Includes both a Streamlit web app and a modern React frontend.
+- **Real-time Predictions**: Instant results with confidence scores and disease management strategies.
+- **Educational Resource**: Detailed symptoms, causes, and treatment plans for each disease.
 
 ## 📁 Project Structure
 ```
-Rice Disease/
-├── leaf_app.py                 # Main Streamlit application
-├── rice_plant_disease.ipynb    # Jupyter notebook with model training & analysis
-├── requirements.txt            # Python dependencies
-├── README.md                  # This file
-└── models/
-    └── cnn_best_model.h5      # Pre-trained CNN model
+Rice-Plant-Disease-Detection/
+├── frontend/                  # Modern React-based user interface
+├── models/                    # Pre-trained CNN model (.h5) and training history
+├── extra/                     # Project presentation and documentation (PPT, DOCX)
+├── leaf_app.py                # Streamlit-based web application
+├── server.py                  # Backend server for the React frontend
+├── rice_plant_disease.ipynb   # Model training and analysis notebook
+├── requirements.txt           # Python dependencies
+└── README.md                  # Project documentation
 ```
 
 ## 📋 System Requirements
@@ -32,7 +33,7 @@ Rice Disease/
 
 #### Step 1: Navigate to project directory
 ```bash
-cd "path/to/Rice Disease"
+cd "Rice-Plant-Disease-Detection"
 ```
 
 #### Step 2: Create a virtual environment (optional but recommended)
@@ -46,24 +47,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-#### Step 4: Download the Pre-trained Model
-The model file is hosted separately due to size constraints:
-
-1. **Download** `cnn_best_model.h5` from this link:
-   📥 [Download Model from Google Drive](https://drive.google.com/file/d/1KMii1LyyVjjt-gO9eKx0L09CGNGKa2lN/view?usp=sharing)
-
-2. **Extract** the downloaded file
-
-3. **Place** it in the `models/` folder:
-   ```
-   Rice Disease/
-   └── models/
-       └── cnn_best_model.h5  ← Place the model file here
-   ```
-
-4. **Verify** the folder structure matches before running the app
-
-#### Step 5: Run the application
+#### Step 4: Run the application
 ```bash
 streamlit run leaf_app.py
 ```
@@ -119,15 +103,11 @@ Access the app at `http://localhost:8501`
 | **Training Framework** | TensorFlow/Keras |
 | **Model File** | `cnn_best_model.h5` |
 
-## � Dataset
+## 📊 Dataset
 
-The dataset used for training this model contains augmented rice leaf images across 6 disease categories:
+The dataset used for training this model contains augmented rice leaf images across 6 disease categories.
 
-📥 **Download Dataset**: [Rice Leaf Dataset (OneDrive)](https://1drv.ms/u/c/80072641619f0550/EdIwaNG2_GNDrDux3l0AyEUBt0lpZJDJIP1ZKa9cOT91Lg)
-
-Extract the dataset and update the `dataset_dir` path in `rice_plant_disease.ipynb` before retraining.
-
-## �🔬 Training & Analysis
+## 🔬 Training & Analysis
 
 For detailed model training, data preprocessing, and analysis, see `rice_plant_disease.ipynb`:
 ```bash
@@ -140,31 +120,10 @@ jupyter notebook rice_plant_disease.ipynb
 |-----------|---------|
 | **TensorFlow/Keras** | Deep learning framework & CNN model |
 | **Streamlit** | Web application framework |
+| **React** | Modern frontend interface |
 | **NumPy** | Numerical computations |
 | **Pillow (PIL)** | Image processing |
 | **OpenCV** | Computer vision utilities |
-| **Pandas** | Data manipulation (training) |
-| **Matplotlib** | Visualization (training) |
-
-## 📦 Dependencies
-
-**Python Packages** (see `requirements.txt`):
-- streamlit >= 1.28.0
-- numpy >= 1.24.0
-- pandas >= 2.0.0
-- matplotlib >= 3.7.0
-- opencv-python-headless >= 4.8.0
-- tensorflow >= 2.13.0
-- Pillow >= 10.0.0
-
-## 🐛 Troubleshooting
-
-| Issue | Solution |
-|-------|----------|
-| Model not found error | Ensure `models/cnn_best_model.h5` exists in the project folder |
-| ImportError (TensorFlow) | Run `pip install --upgrade tensorflow` |
-| Port 8501 already in use | Run `streamlit run leaf_app.py --server.port 8502` |
-| Slow predictions | Increase available RAM or run on a machine with GPU support |
 
 ## 📝 License
 
@@ -172,6 +131,4 @@ MIT License - Feel free to use, modify, and distribute this project.
 
 ## 👨‍💼 Author
 
-Umed Ali (FYP Project - Rice Plant Disease Detection)
-
-
+**Umed Ali** (FYP Project - Rice Plant Disease Detection)
